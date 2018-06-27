@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/recovery-org/recovery-dapp/issues"
   },
-  "homepage": "https://github.com/recovery-org/recovery-dapp#readme"
+  "homepage": "https://github.com/recovery-org/recovery-dapp#readme",
+  "dependencies": {
+    "ethers": "^3.0.24"
+  }
 }
