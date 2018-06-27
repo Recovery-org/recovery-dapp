@@ -1,0 +1,19 @@
+{
+  "name": "recovery-dapp",
+  "version": "1.0.0",
+  "description": "dApp for Recovery, a blockchain-based storage solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recovery-org/recovery-dapp.git"
+  },
+  "author": "Iliès Graffion & Hugo Polloli",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/recovery-org/recovery-dapp/issues"
+  },
+  "homepage": "https://github.com/recovery-org/recovery-dapp#readme"
+}
