@@ -1,22 +1,46 @@
 {
-  "name": "recovery-dapp",
+  "name": "recovery",
   "version": "1.0.0",
   "description": "dApp for Recovery, a blockchain-based storage solution",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd build && node main",
+    "compile": "node build.js && backpack build",
+    "dev": "node build.js && backpack dev | pino -o 'short'",
+    "debug": "node build.js && backpack dev --inspect-brk | pino -o 'short'",
+    "test": "node build.js && _mocha --compilers js:babel-register --exit"
   },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
+    "pino": "^4.15.0",
+    "source-map-support": "^0.5.4",
+    "swagger-express-middleware": "^1.0.0-alpha.12",
+    "ethers": "^3.0.24",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
+    "backpack-core": "^0.7.0",
+    "chai": "^4.1.2",
+    "copy-webpack-plugin": "^4.5.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^5.0.5",
+    "shelljs": "^0.8.1",
+    "supertest": "^3.0.0"
+  },
+  "author": "Iliès Graffion & Hugo Polloli",
+  "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/recovery-org/recovery-dapp.git"
   },
-  "author": "Iliès Graffion & Hugo Polloli",
-  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/recovery-org/recovery-dapp/issues"
   },
-  "homepage": "https://github.com/recovery-org/recovery-dapp#readme",
-  "dependencies": {
-    "ethers": "^3.0.24"
-  }
+  "homepage": "https://github.com/recovery-org/recovery-dapp#readme"
 }
