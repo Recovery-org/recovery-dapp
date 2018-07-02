@@ -1,0 +1,87 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "bytes32"
+			}
+		],
+		"name": "deleteRecovery",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_dataPointer",
+				"type": "bytes"
+			},
+			{
+				"name": "_receiver",
+				"type": "address"
+			}
+		],
+		"name": "newRecovery",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "id",
+				"type": "bytes32"
+			}
+		],
+		"name": "NewRecovery",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "bytes32"
+			}
+		],
+		"name": "recover",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "dataPointer",
+				"type": "bytes"
+			}
+		],
+		"name": "Recover",
+		"type": "event"
+	}
+]
