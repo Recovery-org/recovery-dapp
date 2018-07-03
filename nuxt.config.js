@@ -16,7 +16,13 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/main.css'],
+  css: ['element-ui/lib/theme-chalk/index.css', '~/assets/css/main.css'],
+  /*
+  ** Add element-ui in our app, see plugins/element-ui.js file
+  */
+  plugins: [
+    '@/plugins/element-ui'
+  ],
   /*
   ** Add axios globally
   */
