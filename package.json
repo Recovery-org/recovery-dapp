@@ -4,7 +4,8 @@
   "description": "dApp for Recovery, a blockchain-based storage solution",
   "main": "index.js",
   "scripts": {
-    "start": "cd build && node main",
+    "doStart": "cd build && node main",
+    "start": "nodemon -e js,html --exec yarn doStart",
     "compile": "node build.js && backpack build",
     "dev": "node build.js && backpack dev | pino -o 'short'",
     "debug": "node build.js && backpack dev --inspect-brk | pino -o 'short'",
@@ -20,6 +21,7 @@
     "element-ui": "^2.4.2",
     "ethers": "^3.0.24",
     "express": "^4.16.2",
+    "nodemon": "^1.17.5",
     "pino": "^4.15.0",
     "source-map-support": "^0.5.4",
     "swagger-express-middleware": "^1.0.0-alpha.12",
