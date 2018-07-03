@@ -13,13 +13,14 @@
   },
   "homepage": "https://github.com/recovery-org/recovery-dapp#readme",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "concurrently \"nuxt\" \"nodemon ./api\"",
     "build": "nuxt build",
     "start": "nuxt build && nuxt start",
     "precommit": "npm run lint",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "app-root-path": "^2.1.0",
     "axios": "^0.16.2",
     "cross-env": "^5.0.1",
     "element-ui": "^2.4.3",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "concurrently": "^3.6.0",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
