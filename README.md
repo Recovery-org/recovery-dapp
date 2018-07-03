@@ -1,40 +1,18 @@
-# recovery-dapp
+# recovery-test
 
-recovery-dapp
+> Nuxt.js project
 
-## Install It
-```
-npm install
-```
+## Build Setup
 
-## Run It
-#### Run in *development* mode:
+``` bash
+# install dependencies
+$ npm install # Or yarn install
 
-```
-npm run dev
-```
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-#### Run in *production* mode:
-
-```
-npm run compile
-npm start
+# build for production and launch server
+$ npm start
 ```
 
-#### Run tests:
-
-```
-npm test
-```
-
-#### Deploy to the Cloud
-e.g. CloudFoundry
-
-```
-cf push recovery-dapp
-```
-
-### Try It
-* Point you're browser to [http://localhost:3000](http://localhost:3000)
-* Invoke the example REST endpoint `curl http://localhost:3000/api/v1/examples`
-   
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

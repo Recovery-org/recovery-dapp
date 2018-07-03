@@ -2,45 +2,6 @@
   "name": "recovery",
   "version": "1.0.0",
   "description": "dApp for Recovery, a blockchain-based storage solution",
-  "main": "index.js",
-  "scripts": {
-    "doStart": "cd build && node main",
-    "predoStart": "yarn compile",
-    "start": "nodemon -e js,html --ignore build/ --exec yarn doStart",
-    "compile": "node build.js && backpack build",
-    "dev": "node build.js && backpack dev | pino -o 'short'",
-    "debug": "node build.js && backpack dev --inspect-brk | pino -o 'short'",
-    "test": "node build.js && _mocha --compilers js:babel-register --exit"
-  },
-  "dependencies": {
-    "app-root-path": "^2.1.0",
-    "babel-plugin-component": "^1.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^5.0.1",
-    "element-ui": "^2.4.2",
-    "ethers": "^3.0.24",
-    "express": "^4.16.2",
-    "nodemon": "^1.17.5",
-    "pino": "^4.15.0",
-    "source-map-support": "^0.5.4",
-    "swagger-express-middleware": "^1.0.0-alpha.12",
-    "vue": "^2.5.16"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "babel-preset-env": "^1.6.1",
-    "backpack-core": "^0.7.0",
-    "chai": "^4.1.2",
-    "copy-webpack-plugin": "^4.5.1",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^11.3.2",
-    "eslint-plugin-import": "^2.7.0",
-    "mocha": "^5.0.5",
-    "shelljs": "^0.8.1",
-    "supertest": "^3.0.0"
-  },
   "author": "Iliès Graffion & Hugo Polloli",
   "license": "GPL-3.0-or-later",
   "repository": {
@@ -50,5 +11,31 @@
   "bugs": {
     "url": "https://github.com/recovery-org/recovery-dapp/issues"
   },
-  "homepage": "https://github.com/recovery-org/recovery-dapp#readme"
+  "homepage": "https://github.com/recovery-org/recovery-dapp#readme",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt build && nuxt start",
+    "precommit": "npm run lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "cross-env": "^5.0.1",
+    "express": "^4.15.3",
+    "nuxt": "latest",
+    "source-map-support": "^0.4.15",
+    "ethers": "^3.0.24"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
 }

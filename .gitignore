@@ -1,5 +1,19 @@
+# dependencies
 node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Backpack build
 build
-yarn.lock
-package-lock.json
+
+# others
 config.json
+yarn.lock
+package-lock.json 
