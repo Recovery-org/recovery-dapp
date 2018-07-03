@@ -1,4 +1,4 @@
-# recovery-test
+# recovery-dapp
 
 > Nuxt.js project
 
