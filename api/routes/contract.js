@@ -1,7 +1,3 @@
-const { Router } = require('express')
-
-const router = Router()
-
 // Initialise network
 const Network = require('../services/network.js')
 const network = new Network()
@@ -14,9 +10,9 @@ const factoryContractAddress = '0x49903870ab72e591618321d2026f78d1ef4ec6a8'
 const Contract = require('../services/contract.js')
 const factoryContract = new Contract(factoryContractAddress, factoryAbi, network.infuraProvider)
 
-// Simple route exposing the contract in a json format
-router.get('/contract', function (req, res, next) {
-  res.json(factoryContract)
-})
-
-module.exports = router
+module.exports = function (router) {
+  // Simple route exposing the contract in a json format
+  router.get('/contract', function (req, res, next) {
+    res.json(factoryContract)
+  })
+}
