@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "doStart": "cd build && node main",
-    "start": "nodemon -e js,html --exec yarn doStart",
+    "predoStart": "yarn compile",
+    "start": "nodemon -e js,html --ignore build/ --exec yarn doStart",
     "compile": "node build.js && backpack build",
     "dev": "node build.js && backpack dev | pino -o 'short'",
     "debug": "node build.js && backpack dev --inspect-brk | pino -o 'short'",
