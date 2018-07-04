@@ -3,6 +3,14 @@
     <el-row :gutter="20">
       <el-col :span="8">
         <el-input
+          type="textarea"
+          :autosize="{ minRows: 10, maxRows: 10}"
+          placeholder="Enter your message"
+          v-model="textarea3">
+        </el-input>
+      </el-col>
+      <el-col :span="8">
+        <el-input
           prefix-icon="el-icon-message"
           size="medium"
           placeholder="Enter ETH wallet recipient"
@@ -10,8 +18,18 @@
           clearable>
         </el-input>
       </el-col>
-      <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="8">
+        <el-upload
+          class="upload-demo"
+          drag
+          action="https://jsonplaceholder.typicode.com/posts/"
+          :file-list="fileList3"
+          multiple>
+          <i class="el-icon-upload"></i>
+          <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+          <div class="el-upload__tip" slot="tip">Choose files with a size less than 64Go</div>
+        </el-upload>
+      </el-col>
     </el-row>
   </el-main>
 </template>
@@ -49,7 +67,23 @@
 export default {
   data () {
     return {
-      input10: ''
+      input10: '',
+      textarea3: '',
+      fileList3: [{
+        name: 'photo.jpeg',
+        url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
+      }, {
+        name: 'testament.pdf',
+        url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
+      }, {
+        name: 'movie.mp4',
+        url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
+      }]
+    }
+  },
+  methods: {
+    handleChange (file, fileList) {
+      this.fileList3 = fileList.slice(-3)
     }
   }
 }
