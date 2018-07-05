@@ -24,6 +24,7 @@
     "axios": "^0.18.0",
     "cross-env": "^5.0.1",
     "element-ui": "^2.4.3",
+    "ethereum-address": "^0.0.4",
     "ethers": "^3.0.24",
     "express": "^4.15.3",
     "normalize.css": "^8.0.0",
