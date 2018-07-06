@@ -124,7 +124,7 @@ export default {
   },
   methods: {
     handleChange (file, fileList) {
-      this.fileList3 = fileList.slice(-3)
+      this.fileList = fileList.slice(-3)
     },
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
